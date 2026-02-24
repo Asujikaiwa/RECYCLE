@@ -1,25 +1,27 @@
-// src/firebase.ts
+// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore"; // สำหรับ Database
-import { getStorage } from "firebase/storage";     // สำหรับอัปโหลดรูป
-import { getAuth } from "firebase/auth";           // สำหรับระบบ Login
 import { getAnalytics } from "firebase/analytics";
+// นำเข้าบริการอื่นๆ ที่จำเป็นสำหรับทำเว็บรับซื้อเศษเหล็ก
+import { getFirestore } from "firebase/firestore"; 
+import { getAuth } from "firebase/auth";       
+import { getStorage } from "firebase/storage";  
 
-// ค่า Config จากที่คุณส่งมา
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAV26GQ3wFsMzkfHTxuQIuDRm_liWmr0nE",
-  authDomain: "donut-brand-foods.firebaseapp.com",
-  projectId: "donut-brand-foods",
-  storageBucket: "donut-brand-foods.firebasestorage.app",
-  messagingSenderId: "442965941188",
-  appId: "1:442965941188:web:35eec68c4e0e581a486291",
-  measurementId: "G-JW97HQ6344"
+  apiKey: "AIzaSyDehHQCszWRu8uPxF5LK1EK1QvBH0gheyM",
+  authDomain: "recycle-51bd3.firebaseapp.com",
+  projectId: "recycle-51bd3",
+  storageBucket: "recycle-51bd3.firebasestorage.app",
+  messagingSenderId: "1030093992756",
+  appId: "1:1030093992756:web:7ae6dbdddc7ec79169eb61",
+  measurementId: "G-HF02JPS3PD"
 };
+// Initialize Firebase
+// ใส่คำว่า export เพื่อให้ไฟล์อื่นนำไป import ใช้งานได้
+export const app = initializeApp(firebaseConfig);
+export const analytics = typeof window !== "undefined" ? getAnalytics(app) : null;
 
-// 1. เริ่มต้นแอป
-const app = initializeApp(firebaseConfig);
-
-// 2. Export service ออกไปให้ไฟล์อื่นใช้
-export const db = getFirestore(app);   // เอาไว้เก็บข้อมูลสินค้า (Text)
-export const storage = getStorage(app); // เอาไว้เก็บรูปภาพ (File)
-export const auth = getAuth(app);       // เอาไว้เช็คสิทธิ์ Admin
+// สร้าง instance สำหรับ Database, Auth และ Storage
+export const db = getFirestore(app);       // ใช้สำหรับ เพิ่ม/ลบ/แก้ไข ราคารับซื้อเศษเหล็ก
+export const auth = getAuth(app);          // ใช้สำหรับ ระบบล็อคอินเข้าหลังบ้าน (Admin)
+export const storage = getStorage(app);    // ใช้สำหรับ อัปโหลดรูปภาพเศษเหล็ก หรือสลิปโอนเงิน
