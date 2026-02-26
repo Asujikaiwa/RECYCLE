@@ -63,16 +63,18 @@ const Navbar: React.FC<NavbarProps> = ({ currentLang, setLang, t, scrollToSectio
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           
-          {/* Logo แบบผสมรูปภาพและข้อความ */}
+         {/* Logo แบบผสมรูปภาพและข้อความ */}
           <div 
             className="flex-shrink-0 cursor-pointer flex items-center gap-3" 
             onClick={() => handleNavClick('home')}
           >
-            {/* รูปโลโก้แบรนด์ */}
-            <img src="/PictureProduct/Other/Logo/logo.jpg" alt="Donut Brand Logo" className="h-10 w-10 sm:h-12 sm:w-12 rounded-full object-cover border-2 border-brand-orange/20" />
+            {/* โลโก้ชั่วคราว (คุณสามารถเปลี่ยนรูปโลโก้ TheEndSolution ได้ในภายหลัง) */}
+            <div className="h-10 w-10 sm:h-12 sm:w-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-xl border-2 border-green-200 shadow-sm">
+              TE
+            </div>
             
-            <span className="text-xl sm:text-2xl font-bold font-display text-brand-orange whitespace-nowrap">
-              DONUT <span className="text-brand-dark">BRAND</span>
+            <span className="text-xl sm:text-2xl font-bold font-display text-green-700 whitespace-nowrap">
+              TheEnd<span className="text-green-900">Solution</span>
             </span>
           </div>
 

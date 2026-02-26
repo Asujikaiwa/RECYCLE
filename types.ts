@@ -23,11 +23,10 @@ export interface Product {
   weight: string;
   price: number; 
 
-  // ของใหม่ที่เพิ่มเข้ามา
-  variants?: ProductVariant[]; // เก็บหลายขนาดหลายราคา
-  isBestSeller?: boolean;      // เช็คว่าเป็นสินค้าขายดีไหม
+  variants?: ProductVariant[]; 
+  isBestSeller?: boolean;      
 
-  image: string; // URL to the image
+  image: string; 
   isNew?: boolean;
 }
 
@@ -45,17 +44,17 @@ export interface Translation {
   about: {
     title: string;
     description: string;
-    certTitle: string; // เพิ่ม
-    certDesc: string; // เพิ่ม
-    processTitle: string; // เพิ่ม
-    facilities: string[]; // เพิ่ม
+    certTitle: string; 
+    certDesc: string; 
+    processTitle: string; 
+    facilities: string[]; 
   };
   products: {
     title: string;
     filterAll: string;
-    filterSeasoning: string;
-    filterBeverage: string;
-    filterAdditives: string;
+    filterSteel: string;     // เปลี่ยนหมวดหมู่ให้เข้ากับเศษเหล็ก
+    filterCopper: string;    // เปลี่ยนหมวดหมู่ให้เข้ากับเศษเหล็ก
+    filterAluminum: string;  // เปลี่ยนหมวดหมู่ให้เข้ากับเศษเหล็ก
   };
   contact: {
     title: string;
@@ -68,6 +67,6 @@ export interface Translation {
 
 export interface HeroSlide {
   id: string;
-  url: string; // เก็บ URL ของวิดีโอ
-  type: 'video'; // เผื่ออนาคตอยากใส่ 'image'
+  url: string; 
+  type: 'video'; 
 }

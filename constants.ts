@@ -1,70 +1,118 @@
-import { Language, Product, Translation } from './types';
+import { Language, Translation } from './types';
 
 export const TRANSLATIONS: Record<Language, Translation> = {
   th: {
-    nav: { home: 'หน้าแรก', products: 'สินค้า', contact: 'ติดต่อเรา' },
-    hero: { title: 'รสชาติที่ลงตัว คู่ครัวคุณ', subtitle: 'ผู้ผลิตและจำหน่ายผงปรุงรสและวัตถุเจือปนอาหารคุณภาพสูง ตราโดนัท', cta: 'ดูสินค้าของเรา' },
+    nav: { home: 'หน้าแรก', products: 'ราคารับซื้อ', contact: 'ติดต่อเรา' },
+    hero: { 
+      title: 'รับซื้อ-ขายเศษเหล็ก ให้ราคาสูงที่สุด', 
+      subtitle: 'บริการรับซื้อเศษเหล็ก ทองแดง อลูมิเนียม สแตนเลส ประเมินราคาฟรี จ่ายเงินสดทันที โดย TheEndSolution', 
+      cta: 'ดูราคารับซื้อวันนี้' 
+    },
     about: {
-      title: 'ประวัติบริษัท',
-      description: 'บริษัท อธิป พาณิชย์ จำกัด ก่อตั้งในนาม คุณคนึงรัตน์ ใจตรง เมื่อปี พศ.2543 ดำเนินธุรกิจเกี่ยวกับผลิตและจำหน่าย“ผงปรุงรส”เพื่อขายให้แก่อุตสาหกรรมขนม ได้แก่ ข้าวเกรียบ ข้าวโพดอบกรอบ เป็นต้น\n\nต่อมาในช่วงปี พศ.2546 คุณคนึงรัตน์ ใจตรง ได้เล็งเห็นถึงการมาของกระแส ชานมไข่มุก จึงได้นำเอาผลิตภัณฑ์ “ครีมเทียม” มาจำหน่ายในช่วงนั้น ทำให้กิจการเริ่มขยับขยาย และเติบโตขึ้นอย่างต่อเนื่อง\n\nจนกระทั้งในปี พศ.2560 จึงจดทะเบียนบริษัท ในนาม “บริษัท อธิป พาณิชย์ จำกัด” จากนั้นทางบริษัทฯ ก็ได้มีการขยับขยายสินค้าออกมามากมาย ทั้งในส่วนของ “เครื่องดื่มชนิดผง” “ผงครีมชีส” ”วัตถุเจือปนอาหาร” และอื่นๆอีกมากมายจนถึงปัจจุบัน',
-      certTitle: 'การรับรองมาตรฐานระดับสากล',
-      certDesc: 'บริษัท อธิป พาณิชย์ จำกัด ให้ความสำคัญกับความปลอดภัยและคุณภาพของอาหารเป็นอันดับหนึ่ง โรงงานของเราได้รับการรับรองระบบคุณภาพมาตรฐานสากล CODEX HACCP และ GHPs (Good Hygiene Practices)\n\nซึ่งเป็นการรับประกันว่ากระบวนการผลิตของเรามีความสะอาด ปลอดภัย และได้มาตรฐานในทุกขั้นตอน ตั้งแต่การคัดสรรวัตถุดิบ การควบคุมการผลิต ไปจนถึงการจัดเก็บและส่งมอบ เพื่อให้ผู้บริโภคมั่นใจในคุณภาพสินค้าทุกชิ้นภายใต้แบรนด์ "โดนัท"',
-      processTitle: 'กระบวนการและมาตรฐานการทำงาน',
+      title: 'เกี่ยวกับ TheEndSolution',
+      description: 'TheEndSolution ดำเนินธุรกิจรับซื้อและคัดแยกขยะรีไซเคิลแบบครบวงจร เรามีความเชี่ยวชาญในการรับซื้อเศษเหล็ก ทองแดง อลูมิเนียม สแตนเลส และโลหะทุกชนิด ด้วยประสบการณ์ที่ยาวนาน\n\nเรามุ่งมั่นที่จะเป็นส่วนหนึ่งในการรักษาสิ่งแวดล้อมโดยการนำทรัพยากรกลับมาใช้ใหม่ (Recycle) พร้อมทั้งให้ราคาที่ยุติธรรม อิงตามราคาตลาดโลก และให้บริการที่รวดเร็ว ตรงไปตรงมาแก่ลูกค้าทุกท่าน\n\nไม่ว่าคุณจะเป็นโรงงานอุตสาหกรรม ไซต์งานก่อสร้าง หรือบุคคลทั่วไป เรายินดีให้บริการประเมินราคาฟรี พร้อมรถรับส่งถึงที่ เพื่อให้การขายเศษเหล็กของคุณเป็นเรื่องง่ายและได้ราคาดีที่สุด',
+      certTitle: 'มาตรฐานและการบริการของเรา',
+      certDesc: 'TheEndSolution ให้ความสำคัญกับความโปร่งใสและยุติธรรมในการประเมินราคา เครื่องชั่งของเราได้มาตรฐานและผ่านการตรวจสอบอย่างถูกต้องจากกรมการค้าภายใน\n\nเรามีระบบการจัดการพื้นที่และกระบวนการคัดแยกที่ปลอดภัย เป็นมิตรต่อสิ่งแวดล้อม พร้อมทีมงานมืออาชีพที่พร้อมให้บริการรับซื้อถึงหน้าโรงงานของคุณ เพื่อให้ลูกค้ามั่นใจในบริการของเรา',
+      processTitle: 'ขั้นตอนการรับซื้อและทำงาน',
       facilities: [
-        'โรงงานและเครื่องจักรที่ทันสมัย สะอาด ปลอดภัย',
-        'ควบคุมคุณภาพอย่างเข้มงวดในทุกขั้นตอนการผลิต',
-        'คลังสินค้าและระบบจัดเก็บที่ได้มาตรฐานสากล',
-        'ทีมงานผู้เชี่ยวชาญดูแลกระบวนการผลิตอย่างใกล้ชิด',
-        'การบรรจุหีบห่อที่มิดชิด รักษาคุณภาพสินค้าให้อยู่ได้นาน',
-        'กระบวนการผสมที่แม่นยำ เพื่อรสชาติที่สม่ำเสมอ',
-        'พร้อมส่งมอบผลิตภัณฑ์คุณภาพสูงถึงมือผู้บริโภค'
+        'ติดต่อและส่งรูปภาพเพื่อประเมินราคาเบื้องต้น',
+        'นัดหมายวันและเวลาเพื่อเข้าประเมินหน้างานฟรี',
+        'ทีมงานลงพื้นที่พร้อมรถบรรทุกและตาชั่งมาตรฐาน',
+        'คัดแยกประเภทและชั่งน้ำหนักอย่างโปร่งใสต่อหน้าลูกค้า',
+        'ตีราคาตามมาตรฐานตลาดโลกและจ่ายเงินสดหน้างานทันที',
+        'ขนย้ายรวดเร็วและทำความสะอาดพื้นที่ให้เรียบร้อย',
+        'ออกเอกสารการซื้อขาย/ใบกำกับภาษีอย่างถูกต้อง'
       ]
     },
-    products: { title: 'สินค้าของเรา', filterAll: 'ทั้งหมด', filterSeasoning: 'ผงปรุงรส', filterBeverage: 'เครื่องดื่ม', filterAdditives: 'วัตถุดิบ/สารเสริม' },
-    contact: { title: 'ติดต่อเรา', addressLabel: 'ที่อยู่บริษัท', phoneLabel: 'เบอร์โทรศัพท์', emailLabel: 'อีเมล', followUs: 'ติดตามเราได้ที่' },
+    products: { 
+      title: 'ราคารับซื้อวันนี้', 
+      filterAll: 'ทั้งหมด', 
+      filterSteel: 'กลุ่มเหล็ก', 
+      filterCopper: 'ทองแดง/ทองเหลือง', 
+      filterAluminum: 'อลูมิเนียม/สแตนเลส' 
+    },
+    contact: { 
+      title: 'ติดต่อขายเศษเหล็ก', 
+      addressLabel: 'ที่อยู่จุดรับซื้อ', 
+      phoneLabel: 'เบอร์โทรศัพท์', 
+      emailLabel: 'อีเมล', 
+      followUs: 'ติดตามเราได้ที่' 
+    },
   },
   en: {
-    nav: { home: 'Home', products: 'Products', contact: 'Contact' },
-    hero: { title: 'The Perfect Taste for Your Kitchen', subtitle: 'Manufacturer and distributor of high-quality food additives and seasoning powders, Donut Brand.', cta: 'View Products' },
+    nav: { home: 'Home', products: 'Scrap Prices', contact: 'Contact' },
+    hero: { 
+      title: 'Top Prices for Scrap Metal', 
+      subtitle: 'Buying and selling scrap iron, copper, aluminum, and stainless steel. Free estimation, instant cash by TheEndSolution.', 
+      cta: 'Check Today\'s Prices' 
+    },
     about: {
-      title: 'Company History',
-      description: 'Athip Panich Co., Ltd. was founded by Ms. Kanuengrut Jaitrong in 2000. The business started by manufacturing and distributing "seasoning powders" for the snack industry, such as crackers and crispy corn.\n\nLater, in 2003, seeing the rising trend of bubble tea, Ms. Kanuengrut began selling "non-dairy creamer", which led to continuous business expansion and growth.\n\nEventually, in 2017, the company was officially registered as "Athip Panich Co., Ltd.". Since then, the company has expanded its product lines extensively, including "beverage powders", "cream cheese powders", "food additives", and many others to this day.',
-      certTitle: 'International Standard Certifications',
-      certDesc: 'Athip Panich Co., Ltd. prioritizes food safety and quality above all else. Our factory is certified with international quality standard systems: CODEX HACCP and GHPs (Good Hygiene Practices).\n\nThis guarantees that our production processes are clean, safe, and standardized at every step—from selecting raw materials and controlling production to storage and delivery. Consumers can be confident in the quality of every product under the "Donut" brand.',
-      processTitle: 'Working Process & Standards',
+      title: 'About TheEndSolution',
+      description: 'TheEndSolution operates a comprehensive scrap metal and recycling business. We specialize in buying scrap iron, copper, aluminum, stainless steel, and all types of metals with years of experience.\n\nWe are committed to being part of environmental conservation through recycling, while providing fair prices based on the global market and fast, straightforward service to all our customers.\n\nWhether you are an industrial factory, a construction site, or an individual, we offer free estimates and on-site pickup services to make selling your scrap metal easy and highly profitable.',
+      certTitle: 'Our Standards & Services',
+      certDesc: 'TheEndSolution prioritizes transparency and fairness in pricing. Our weighing scales are standardized and legally verified by the Department of Internal Trade.\n\nWe maintain a safe and eco-friendly site management and sorting process, staffed by a professional team ready to provide on-site purchasing services at your factory, ensuring customer confidence in our operations.',
+      processTitle: 'Our Purchasing Process',
       facilities: [
-        'Modern, clean, and safe factory and machinery',
-        'Strict quality control in every production step',
-        'Warehouse and storage systems meeting international standards',
-        'Expert team closely monitoring the production process',
-        'Secure packaging to preserve product quality for longer',
-        'Precise mixing process for consistent flavor',
-        'Ready to deliver high-quality products to consumers'
+        'Contact us and send photos for an initial estimate',
+        'Schedule a date and time for a free on-site evaluation',
+        'Our team arrives with trucks and standardized scales',
+        'Transparent sorting and weighing in front of the customer',
+        'Pricing based on global market standards with instant cash payment',
+        'Fast removal and site cleanup',
+        'Proper issuance of trading documents and tax invoices'
       ]
     },
-    products: { title: 'Our Products', filterAll: 'All', filterSeasoning: 'Seasonings', filterBeverage: 'Beverages', filterAdditives: 'Additives' },
-    contact: { title: 'Contact Us', addressLabel: 'Address', phoneLabel: 'Phone', emailLabel: 'Email', followUs: 'Follow Us' },
+    products: { 
+      title: 'Today\'s Prices', 
+      filterAll: 'All', 
+      filterSteel: 'Steel Group', 
+      filterCopper: 'Copper & Brass', 
+      filterAluminum: 'Aluminum & Stainless' 
+    },
+    contact: { 
+      title: 'Contact Us', 
+      addressLabel: 'Scrap Yard Address', 
+      phoneLabel: 'Phone', 
+      emailLabel: 'Email', 
+      followUs: 'Follow Us' 
+    },
   },
   cn: {
-    nav: { home: '首页', products: '产品', contact: '联系我们' },
-    hero: { title: '厨房的完美味道', subtitle: 'Donut 品牌高品质食品添加剂和调味粉的生产商和分销商。', cta: '查看产品' },
+    nav: { home: '首页', products: '回收价格', contact: '联系我们' },
+    hero: { 
+      title: '高价回收废金属', 
+      subtitle: '专业回收废铁、铜、铝和不锈钢。免费估价，现金结算，由 TheEndSolution 提供。', 
+      cta: '查看今日价格' 
+    },
     about: {
-      title: '公司历史',
-      description: 'Athip Panich 有限公司由 Kanuengrut Jaitrong 女士于 2000 年创立。该业务最初为休闲食品行业（如饼干和脆玉米）生产和销售“调味粉”。\n\n后来，在 2003 年，看到珍珠奶茶的上升趋势，Kanuengrut 女士开始销售“植脂末”，这导致业务不断扩张和增长。\n\n最终，在 2017 年，公司正式注册为“Athip Panich 有限公司”。从那时起，公司广泛扩展了其产品线，包括“饮料粉”、“奶油芝士粉”、“食品添加剂”以及至今的许多其他产品。',
-      certTitle: '国际标准认证',
-      certDesc: 'Athip Panich 有限公司将食品安全和质量放在首位。我们的工厂已通过国际质量标准体系认证：CODEX HACCP 和 GHPs（良好卫生规范）。\n\n这保证了我们的生产过程在从选择原材料和控制生产到储存和交付的每一个环节都是清洁、安全和标准化的。消费者可以对“Donut”品牌下每一件产品的质量充满信心。',
-      processTitle: '工作流程与标准',
+      title: '关于 TheEndSolution',
+      description: 'TheEndSolution 经营全面的废金属和回收业务。我们凭借多年的经验，专业回收废铁、铜、铝、不锈钢及各类金属。\n\n我们致力于通过回收利用参与环境保护，同时根据全球市场提供公平的价格，并为所有客户提供快速、直接的服务。\n\n无论您是工业工厂、建筑工地还是个人，我们都提供免费估价和上门回收服务，让您轻松、高利润地出售废金属。',
+      certTitle: '我们的标准与服务',
+      certDesc: 'TheEndSolution 在定价方面优先考虑透明度和公平性。我们的称重秤已标准化并经过国内贸易部的合法验证。\n\n我们保持安全和环保的现场管理和分类流程，由专业团队在您的工厂提供现场采购服务，确保客户对我们的运营充满信心。',
+      processTitle: '回收流程',
       facilities: [
-        '现代化、清洁、安全的工厂和机械',
-        '每个生产环节的严格质量控制',
-        '符合国际标准的仓库和存储系统',
-        '专家团队密切监控生产过程',
-        '安全的包装，更长时间地保持产品质量',
-        '精确的混合工艺，确保风味一致',
-        '准备向消费者交付高质量产品'
+        '联系我们并发送照片以进行初步估价',
+        '安排日期和时间进行免费现场评估',
+        '我们的团队带着卡车和标准化秤到达',
+        '在客户面前透明地进行分类和称重',
+        '根据全球市场标准定价，现场现金支付',
+        '快速搬运和现场清理',
+        '正确开具交易凭证和税务发票'
       ]
     },
-    products: { title: '我们的产品', filterAll: '全部', filterSeasoning: '调味料', filterBeverage: '饮料', filterAdditives: '添加剂' },
-    contact: { title: '联系我们', addressLabel: '地址', phoneLabel: '电话', emailLabel: '电子邮件', followUs: '关注我们' },
+    products: { 
+      title: '今日价格', 
+      filterAll: '全部', 
+      filterSteel: '钢铁类', 
+      filterCopper: '铜和黄铜', 
+      filterAluminum: '铝和不锈钢' 
+    },
+    contact: { 
+      title: '联系我们', 
+      addressLabel: '回收站地址', 
+      phoneLabel: '电话', 
+      emailLabel: '电子邮件', 
+      followUs: '关注我们' 
+    },
   },
 };
